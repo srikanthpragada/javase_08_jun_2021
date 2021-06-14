@@ -9,7 +9,7 @@ public class FunsDemo {
 	public static int max(int... values) {
 
 		int largest = values[0];
-		for (int v : values)
+		for (int v : values) 
 			if (v > largest)
 				largest = v;
 
