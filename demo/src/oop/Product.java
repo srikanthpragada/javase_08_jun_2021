@@ -1,11 +1,17 @@
 package oop;
 
 public class Product {
-	// Instance variables 
+	// Instance variables
 	private String name;
 	private int price;
+	
+	// Constructor 
+	public Product(String n, int p) {
+		name = n;
+		price = p;
+	}
 
-	// Methods 
+	// Methods
 	public void print() {
 		System.out.println(name);
 		System.out.println(price);
@@ -13,11 +19,6 @@ public class Product {
 
 	public int getSellingPrice() {
 		return price + price * 10 / 100;
-	}
-	
-	public void init(String n, int p) {
-		name = n;
-		price = p;
 	}
 
 }
