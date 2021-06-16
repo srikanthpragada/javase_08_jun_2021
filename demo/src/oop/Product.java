@@ -7,18 +7,18 @@ public class Product {
 	
 	// Constructor 
 	public Product(String n, int p) {
-		name = n;
-		price = p;
+		this.name = n;
+		this.price = p;
 	}
 
 	// Methods
 	public void print() {
-		System.out.println(name);
-		System.out.println(price);
+		System.out.println(this.name);
+		System.out.println(this.price);
 	}
 
 	public int getSellingPrice() {
-		return price + price * 10 / 100;
+		return this.price + this.price * 10 / 100;
 	}
 
 }
