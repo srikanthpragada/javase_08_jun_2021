@@ -1,9 +1,15 @@
 package oop;
 
+
 public class SavingsAccount {
+	// Instance variables 
 	private int acno;
 	private String ahname;
 	private double balance;
+	private final static int MINBAL = 5000;
+	
+	// Class variables
+	private static double rate = 3.0;
 
 	public SavingsAccount(int acno, String ahname) {
 		this.acno = acno;
@@ -11,8 +17,7 @@ public class SavingsAccount {
 	}
 
 	public SavingsAccount(int acno, String ahname, double balance) {
-		this.acno = acno;
-		this.ahname = ahname;
+		this(acno,ahname);  // call another constructor
 		this.balance = balance;
 	}
 

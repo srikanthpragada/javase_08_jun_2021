@@ -4,11 +4,17 @@ public class Product {
 	// Instance variables
 	private String name;
 	private int price;
+	// static or class variable
+	private static double taxrate = 12;
+	
+	public static double getTaxrate() {
+		return Product.taxrate;
+	}
 	
 	// Constructor 
-	public Product(String n, int p) {
-		this.name = n;
-		this.price = p;
+	public Product(String name, int price) {
+		 this.name = name;
+		 this.price = price;
 	}
 
 	// Methods
@@ -17,8 +23,8 @@ public class Product {
 		System.out.println(this.price);
 	}
 
-	public int getSellingPrice() {
-		return this.price + this.price * 10 / 100;
+	public double getSellingPrice() {
+		return this.price + this.price * Product.taxrate / 100;
 	}
 
 }
