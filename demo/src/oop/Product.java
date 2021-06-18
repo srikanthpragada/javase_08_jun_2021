@@ -6,6 +6,11 @@ public class Product {
 	private int price;
 	// static or class variable
 	private static double taxrate = 12;
+	private static int count;
+	
+	public static int getCount() {
+		return Product.count; 
+	}
 	
 	public static double getTaxrate() {
 		return Product.taxrate;
@@ -15,6 +20,7 @@ public class Product {
 	public Product(String name, int price) {
 		 this.name = name;
 		 this.price = price;
+		 Product.count ++;
 	}
 
 	// Methods
