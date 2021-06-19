@@ -39,14 +39,38 @@ class Student extends Person {
 	}
 }
 
+class FStudent extends Student {
+	private String country;
+
+	public FStudent(String name, String email, String course, String country) {
+		super(name, email, course); // Call super class's constructor
+		this.country = country;
+	}
+
+	// Overriding
+	@Override
+	public void print() {
+		super.print();
+		System.out.println(this.country);
+	}
+
+	public String getCountry() {
+		return this.country;
+	}
+}
+
 public class TestPerson {
 
 	public static void main(String[] args) {
+
 		Person p = new Person("Joe", "joe@yahoo.com");
 		p.print();
 
-		Student s = new Student("Ben", "ben@gmail.com", "Java");
-		s.print();
+		p = new Student("Ben", "ben@gmail.com", "Java");
+		p.print();
+
+		p = new FStudent("Larry", "larry@gmail.com", "Java", "India");
+		p.print();
 
 	}
 
