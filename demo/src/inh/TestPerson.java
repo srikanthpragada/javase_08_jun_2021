@@ -1,6 +1,6 @@
 package inh;
 
-class Person {
+abstract class Person {
 	protected String name, email;
 
 	public Person(String name, String email) {
@@ -14,9 +14,12 @@ class Person {
 		System.out.println(this.email);
 	}
 
-	public String getEmail() {
+	// Cannot override
+	final public String getEmail() {
 		return this.email;
 	}
+    // Must override 
+	abstract public String getOccupation();
 }
 
 class Student extends Person {
@@ -36,6 +39,10 @@ class Student extends Person {
 
 	public String getCourse() {
 		return this.course;
+	}
+
+	public String getOccupation() {
+		return "Studying " + this.course;
 	}
 }
 
@@ -57,20 +64,27 @@ class FStudent extends Student {
 	public String getCountry() {
 		return this.country;
 	}
+
+	public String getOccupation() {
+		return "From " + this.country + " and studying " + this.getCourse();
+	}
 }
 
 public class TestPerson {
 
 	public static void main(String[] args) {
 
-		Person p = new Person("Joe", "joe@yahoo.com");
-		p.print();
+		Person p;
+		// = new Person("Joe", "joe@yahoo.com");
+		// p.print(); // Runtime polymorphism
 
 		p = new Student("Ben", "ben@gmail.com", "Java");
-		p.print();
+		p.print(); // Runtime polymorphism
+		System.out.println(p.getOccupation()); // Runtime polymorphism
 
 		p = new FStudent("Larry", "larry@gmail.com", "Java", "India");
 		p.print();
+		System.out.println(p.getOccupation());
 
 	}
 
