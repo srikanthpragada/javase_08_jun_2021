@@ -1,5 +1,6 @@
 package library;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -16,6 +17,9 @@ public class OldDateDemo {
 		
 		var ct = new Date();
 		System.out.println(ct);
+		
+		var sdf = new SimpleDateFormat("d-MMM-yyyy HH:mm");
+		System.out.println(sdf.format(ct));
 		
 	}
 
