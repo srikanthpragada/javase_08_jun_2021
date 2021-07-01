@@ -7,6 +7,8 @@ public class ExTypesDemo {
 		
 		int v = Integer.parseInt(s);
 		
+		// Thread.sleep(v);
+		
 		
 
 	}
