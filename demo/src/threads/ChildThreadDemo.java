@@ -20,8 +20,8 @@ public class ChildThreadDemo {
         for (int i = 1; i <= 25; i++)
 			System.out.println("Main : " + i);
         
-        //System.out.println("Waiting for child to terminate!");
-        //ct.join(); // Main is waiting for child    
+//        System.out.println("Waiting for child to terminate!");
+//        ct.join(); // Main is waiting for child    
         System.out.println("End of Main");
 	}
 

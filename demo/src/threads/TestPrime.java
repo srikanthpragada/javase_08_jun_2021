@@ -20,7 +20,7 @@ class PrimeThread extends Thread {
 
 public class TestPrime {
 	public static void main(String[] args) {
-		int nums[] = { 2223231, 3938389, 19, 39, 57 };
+		int nums[] = {2223231, 3938389, 19, 39, 57};
 
 		for (int n : nums) {
 			PrimeThread pt = new PrimeThread(n);
