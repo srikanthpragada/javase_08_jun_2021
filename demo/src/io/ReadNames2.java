@@ -6,7 +6,7 @@ public class ReadNames2 {
 
 	public static void main(String[] args) {
 		// Try with resources or ARM
-		try (var fr = new FileReader("c:\\classroom\\apr27\\names.txt")) {
+		try (var fr = new FileReader("langs.txt")) {
 			int ch;
 
 			while (true) {
@@ -15,6 +15,7 @@ public class ReadNames2 {
 					break;
 				System.out.print((char) ch);
 			}
+			
 		} catch (Exception ex) {
 			System.out.println(ex.getMessage());
 		}
