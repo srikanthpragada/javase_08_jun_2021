@@ -10,9 +10,9 @@ public class NewIODemo {
 	public static void main(String[] args) throws IOException {
 		Path file = Path.of("names.txt");
 		System.out.println(file.getClass());
-		// Files.delete(file);
+		Files.delete(file);
 		
-		Path path = Path.of("c:\\classroom\\apr27");
+		Path path = Path.of("c:\\classroom\\jun8");
 		System.out.println(Files.exists(path));
 
 	}
