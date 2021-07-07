@@ -9,13 +9,13 @@ import java.util.Scanner;
 public class MarksServer {
 
 	public static int getMarks(int rollno, RandomAccessFile file) throws Exception {
-		 int pos = (rollno - 1);
+		 int pos = (rollno - 1) * 4;
 		 file.seek(pos);
-		 return file.readByte();
+		 return file.readInt();
 	}
 
 	public static void main(String args[]) throws Exception {
-		var file = new RandomAccessFile("c:\\classroom\\marks.dat", "r");
+		var file = new RandomAccessFile("marks.dat", "r");
 		ServerSocket ss = new ServerSocket(3000, 10);
 		System.out.println("Marks server is ready...");
 
