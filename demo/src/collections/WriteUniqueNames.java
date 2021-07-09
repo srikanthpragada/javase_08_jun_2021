@@ -9,7 +9,7 @@ public class WriteUniqueNames {
 
 	public static void main(String[] args) throws Exception {
 		var names = new ArrayList<String>();
-		var file = new FileWriter("sortednames.txt");
+		var file = new FileWriter("c:\\classroom\\sortednames.txt");
 		var scanner = new Scanner(System.in);
 		
 		while (true) {

@@ -9,7 +9,7 @@ public class ArrayListDemo {
 		 ArrayList al = new ArrayList();
 		 al.add("Abc");
 		 al.add("Xyz");
-		 al.add(10);  // 10 to Integer to Object 
+		 al.add(10);  // 10 to Integer (Autoboxing) to Object 
 		 
 		 for(Object obj : al) {
 			 System.out.println(obj);

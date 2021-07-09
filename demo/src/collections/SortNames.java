@@ -10,7 +10,7 @@ public class SortNames {
 	public static void main(String[] args) throws Exception {
 		var names = new ArrayList<String>();
 
-		var fr = new FileReader("c:\\classroom\\apr27\\names.txt");
+		var fr = new FileReader("c:\\classroom\\names.txt");
 		var br = new BufferedReader(fr);
 
 		while (true) {
