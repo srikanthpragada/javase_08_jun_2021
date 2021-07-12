@@ -7,9 +7,10 @@ public class GenericMethodDemo {
 			System.out.print(n + " ");
 	}
 
+	// T should be a class that implements Comparable interface 
 	public static <T extends Comparable<T>> boolean search(T a[], T value) {
 		for (T n : a)
-			if (n.compareTo(value) == 0)
+			if (n.compareTo(value) == 0)   // found?
 				return true;
 
 		return false;
@@ -21,8 +22,8 @@ public class GenericMethodDemo {
 			this.x = x;
 			this.y = y;
 		}
-		@Override
-		public int compareTo(Point o) {
+		 
+		public int compareTo(Point other) {
 			return 0;
 		}
 	}
