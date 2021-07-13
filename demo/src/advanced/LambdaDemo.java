@@ -14,10 +14,11 @@ public class LambdaDemo {
 	}
 
 	public static void main(String[] args) {
+		// Method 1 - Using a class that implements Runnable 
 		Thread t1 = new Thread(new Task()); // Thread(Runnable)
 		t1.start();
-
-		// Using anonymous inner class
+		
+		// Method 2 -  Using anonymous inner class
 		Thread t2 = new Thread(new Runnable() {
 			public void run() {
 				System.out.println("Anonymous inner class thread!");
@@ -26,11 +27,11 @@ public class LambdaDemo {
 
 		t2.start();
 
-		// Lambda Expression
+		// Method 3 - Lambda Expression
 		Thread t3 = new Thread(() -> System.out.println("Thread with Lambda!"));
 		t3.start();
 
-		// Lambda Block
+		// Method 4 -  Lambda Block
 		Thread t4 = new Thread(() -> {
 			for (int i = 1; i <= 5; i++)
 				System.out.println(i);
@@ -40,8 +41,8 @@ public class LambdaDemo {
 
 		// Thread t5 = new Thread(() -> printNumbers());
 
-		// Method Reference
-		Thread t5 = new Thread(LambdaDemo::printNumbers);
+		// Method 5 - Method Reference
+		Thread t5 = new Thread(LambdaDemo::printNumbers);  // void run()
 		t5.start();
 
 	}
