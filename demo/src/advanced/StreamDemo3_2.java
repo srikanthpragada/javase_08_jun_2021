@@ -4,13 +4,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.regex.Pattern;
 
-public class StreamDemo3 {
+public class StreamDemo3_2 {
 
 	public static void main(String[] args) throws Exception {
-		 var lines = Files.readAllLines(Path.of("c:\\classroom\\jun8\\markslist.txt"));
 		 
 		 double avg = 
-  	    	 lines.stream()    // List to Stream
+  	    	 Files.lines(Path.of("c:\\classroom\\jun8\\markslist.txt"))
   	    	 .filter(line -> Pattern.matches("\\d+", line))
 		     .mapToInt(Integer::parseInt)     // ToIntFunction - int applyAsInt(object)
 		     .average()      // OptionalDouble 
@@ -18,7 +17,7 @@ public class StreamDemo3 {
 		 
 		 System.out.println(avg);
 		 
-		  lines.stream()
+		 Files.lines(Path.of("c:\\classroom\\jun8\\markslist.txt"))
 		      .filter(line -> Pattern.matches("\\d+", line))
 	          .mapToInt(Integer::parseInt)
 	          .filter(n ->  n > avg)

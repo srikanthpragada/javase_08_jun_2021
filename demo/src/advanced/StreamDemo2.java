@@ -12,10 +12,13 @@ public class StreamDemo2 {
 		var stream = Files.lines(path);
 		
 		stream.filter(n ->  Pattern.matches("[a-zA-Z ]+",n))
+		     .map(s -> s.toUpperCase())
 		     .distinct()
 		     .sorted()
-		     .limit(4)
 		     .forEach(System.out::println);
+		
+		
+		// stream.sorted().forEach(System.out::println);
     
 	}
 
