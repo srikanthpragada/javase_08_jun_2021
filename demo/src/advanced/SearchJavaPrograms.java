@@ -17,7 +17,7 @@ public class SearchJavaPrograms {
 	}
 
 	public static void main(String[] args) throws Exception {
-		Path startdir = Path.of("c:\\classroom\\apr27");
+		Path startdir = Path.of("c:\\classroom\\jun8");
 		String pattern = "LocalDate";
 
 		Files.walk(startdir)

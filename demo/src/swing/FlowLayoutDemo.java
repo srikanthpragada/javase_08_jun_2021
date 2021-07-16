@@ -16,7 +16,7 @@ public class FlowLayoutDemo extends JFrame {
 		b2 = new JButton("Cancel");
 
 		Container c = getContentPane();
-		c.setLayout(new FlowLayout());
+		c.setLayout(new FlowLayout()); // Change layout manager 
 
 		c.add(l1);
 		c.add(tfEmail);

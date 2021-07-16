@@ -12,7 +12,7 @@ public class GridLayoutDemo extends JFrame {
 		Container c = getContentPane();
 		c.setLayout(new GridLayout(0,3));
 
-		for (int i = 1; i <= 6; i++)
+		for (int i = 1; i <= 8; i++)
 			c.add(new JButton("Button" + i));
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
