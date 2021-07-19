@@ -30,7 +30,7 @@ public class ShowJavaFiles extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		tfDir = new JTextField(20);
-		tfDir.setText("c:\\classroom\\apr27");
+		tfDir.setText("c:\\classroom\\jun8");
 		btnList = new JButton("List");
 		btnExit = new JButton("Exit");
 
@@ -43,7 +43,8 @@ public class ShowJavaFiles extends JFrame {
 		// Listbox
 		files = new DefaultListModel<String>();
 		lstFiles = new JList<String>(files);
-		JScrollPane jsp = new JScrollPane(lstFiles, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
+		JScrollPane jsp = new JScrollPane(lstFiles, 
+				JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
 				JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 
 		Container c = getContentPane();

@@ -50,21 +50,27 @@ public class ListDemo extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(400, 200);
 		
-		btnAdd.addActionListener(e -> {
+		// Add 
+		btnAdd.addActionListener(e ->
+		{
 			String name = JOptionPane.showInputDialog(this, "Enter a name:", "Add",
 					                                  JOptionPane.PLAIN_MESSAGE);
 			if (name != null)
 				data.addElement(name);
 		});
+		
         // Remove 
-		btnRemove.addActionListener(e -> {
+		btnRemove.addActionListener(e -> 
+		{
 			int res = JOptionPane.showConfirmDialog(this, 
 					"Do you want to delete selected items?", "Confirm",
 					JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+			
 			if (res == JOptionPane.YES_OPTION) {
 				lst.getSelectedValuesList().forEach(name -> data.removeElement(name));
 			}
 		});
+		
         // List
 		btnList.addActionListener(e -> {
 			var names = lst.getSelectedValuesList();
